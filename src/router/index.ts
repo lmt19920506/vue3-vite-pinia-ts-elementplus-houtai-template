@@ -106,6 +106,19 @@ export const asyncRoutes = [
         meta: { title: '按钮权限' }
       }
     ]
+  },
+  {
+    path: '/table',
+    component: LayoutIndex,
+    alwaysShow: true,
+    meta: {title: '表格类', icon: 'Lock'},
+    children: [
+      {
+        path: 'listAutoScroll',
+        component: () => import('@/views/Table/listAutoScroll.vue'),
+        meta: { title: '表格自动滚动' }
+      }
+    ]
   }
 ]
 
